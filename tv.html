@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="exampleCanvas" width="500" height="300" style="border:1px solid #000000;">
+    </canvas>
+    <img src="tv.jpg">
+
+    <button id="power" onclick="">aa</button>
+
+    <script>
+        class Remote {
+            constructor(code) {
+                this.code = code;
+            }
+
+            changeChannel(tv, n) {
+                tv.channel = n;
+            }
+            changeVolume(tv, n) {
+                tv.volume = n;
+                
+            }
+
+        }
+        class Tv {
+            constructor(status) {
+                this.status = false;
+                this.channel = 0;
+                this.volume = 10;
+            }
+            changeChannelTv(n) {
+                this.channel = n;
+            }
+            changeVolumeTv(n) {
+                this.volume = n;
+            }
+        }
+        let tivi = new Tv(false);
+        let re1 = new Remote(113);
+        re1.changeChannelTv(10);
+        re1.changeVolume(20);
+
+
+    </script>
+</body>
+
+</html>
